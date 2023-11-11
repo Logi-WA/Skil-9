@@ -1,0 +1,23 @@
+{
+  "name": "vef1-2023-v9",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start --server --files ./src/ styles.css index.html",
+    "lint": "eslint ./**/*.js",
+    "prettier": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "lint": "^0.8.19",
+    "prettier": "^3.0.3"
+  },
+  "description": ""
+}
