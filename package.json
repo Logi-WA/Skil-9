@@ -5,7 +5,12 @@
   "scripts": {
     "dev": "browser-sync start --server --files ./src/ styles.css index.html",
     "lint": "eslint ./**/*.js",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --single-quote --write .",
+    "copy:html": "cpy ./*.html ./build/",
+    "copy:js": "cpy ./src/*.js ./build/",
+    "copy:jss": "cpy ./src/lib/*.js ./build/",
+    "copy:css": "cpy ./*.css ./build/",
+    "build": "concurrently npm:copy:*"
   },
   "keywords": [],
   "author": "",

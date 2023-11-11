@@ -17,7 +17,6 @@ html {
 :root {
   --spacing: 1rem;
   --max-width: 56rem;
-
   --font-family: -system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -53,14 +52,70 @@ h2 {
   font-size: 1.5rem;
 }
 
+html,
+body {
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
 main {
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
-
   margin: var(--spacing) auto;
   padding-inline: var(--spacing);
   max-width: var(--max-width);
+  width: 100%;
+  align-self: flex-start;
+  overflow: hidden;
 }
 
-/* TODO nánari stílar */
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.search-form {
+  display: flex;
+}
+
+.search-box {
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 16px;
+  border: 4px solid #555;
+  outline: none;
+  width: calc(100% - 100px);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  margin-top: 8px;
+  font-size: 16px;
+  border: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.search-btn:hover {
+  background-color: #777;
+}
+
+.back a {
+  color: white;
+  text-decoration: none;
+}
+
+.back a:hover {
+  text-decoration: underline;
+}
